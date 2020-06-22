@@ -1,0 +1,45 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #000066;
+}
+
+#table-section {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+thead {
+    background:#ffffff;
+}
+
+thead tr th {
+    color: #000066;
+}
+
+tbody tr td,
+tbody tr th {
+    color: #ffffff;
+}
+
+tr {
+    border-bottom: 5px solid #0000e5;
+}
+
+@media only screen and (max-width: 700px) {
+    .title h2 {
+        font-size: 1.2rem;
+    }
+
+    thead tr th,
+    tbody tr td,
+    tbody tr th {
+        font-size: .8rem;
+    }
+}
