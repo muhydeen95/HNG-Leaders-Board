@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5ef0f923b61c220011098161&product=inline-share-buttons" async="async"></script>
   
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -27,7 +26,7 @@
             <div class="title">
                 <h2 class="pt-5 pb-4 text-center">HNG Internship Leaders Board</h2>
             </div>
-            <table class="table text-center">
+            <table class="table text-center" id="table">
                 <thead>
                   <tr>
                     <th scope="col">S/N</th>
@@ -37,51 +36,40 @@
                     <th scope="col">Total Points</th>
                   </tr>
                 </thead>
-                <tbody  id="table-section">
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark Essien</td>
-                    <td>@Otto</td>
-                    <td>hng@email.com</td>
-                    <td>17</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob Akan</td>
-                    <td>@Thornton</td>
-                    <td>hng@email.com</td>
-                    <td>12</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry Luna</td>
-                    <td>@the Bird</td>
-                    <td>hng@email.com</td>
-                    <td>9</td>
-                  </tr>
-             </head>
+                <tbody>
 
-<body>
-<div class="sharethis-inline-share-buttons"></div>
-
-<center><table id='table' border cellpadding=5>
-       
-
-<script type="text/javascript" src="jquery-3.2.1.js"></script>
-<script type="text/javascript" src="leaderboard.js"></script>
-      
-        
-    </tbody>
-</table>             
-
+                </tbody>
+              </table>
+        </div>
     </section>
-    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
   </body>
 </html>
+
+<!--JavaScript function for populating the table-->
+<script>
+  $(document).ready(function () {
+      $getJSON("cugbo/leaderboard.json", function (data) {
+          var inter_data = '' ;
+              $.each(data, function (key, value) {
+                  intern_data += '<tr>';
+                  intern_data += '<td>'+value.fullname+'</td>';
+                  intern_data += '<td>'+value.username+'</td>';
+                  intern_data += '<td>'+value.email+'</td>';
+                  intern_data += '<td>'+value.totalpoint+'</td>';
+                  intern_data += '</tr>';
+      });
+              $('#table').append(intern_data);
+      });
+  });
+</script>
+
+
 
 
