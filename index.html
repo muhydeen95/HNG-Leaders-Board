@@ -37,7 +37,7 @@
                     <th scope="col">Total Points</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody  id="body">
                   <!--tr>
                     <th scope="row">1</th>
                     <td>Mark Essien</td>
@@ -59,6 +59,23 @@
                     <td>hng@email.com</td>
                     <td>9</td>
                   </tr-->
+                 
+                  <script> 
+                    fetch"leaderboard.js").then(
+                      res=>{
+                        res.json().then(
+                          data=>{
+                            console.log(data);
+                            if(data.length > 0){
+                              var temp = "";
+
+                              data.forEach((u)=>{
+                                temp +=" <tr>";
+                                temp += "<td>"+.name+"</td>
+                              })
+
+                              document.getElementById ("body").innerHTML 
+
                  
                  <div class="sharethis-inline-share-buttons"></div>
                  <class= script type="text/javascript" src="leaderboard.js"></script>
