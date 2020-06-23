@@ -5,22 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script> 
-fetch"leaderboard.js").then(
-res=>{
-res.json().then(
-data=>{
-console.log(data);
-if(data.length > 0){
-var temp = "";
-
-data.forEach((u)=>{
-temp +=" <tr>";
-temp += "<td>"+.name+"</td>
-})
-
-document.getElementById ("body").innerHTML =temp;
-}
-}
+      fetch"leaderboard.js").then(
+        res=>{
+          res.json().then(
+            data=>{
+              console.log(data);
+              if(data.length > 0){
+                var temp = "";
+                
+                data.forEach((u)=>{
+                  temp +=" <tr>";
+                  temp += "<td>"+.name+"</td>
+                })
+          document.getElementById ("body").innerHTML =temp;
+              }
+            }
 
   
     <!-- Bootstrap CSS -->
