@@ -59,6 +59,37 @@
                     <td>hng@email.com</td>
                     <td>9</td>
                   </tr-->
+                      <tbody id="myTable">
+        
+    </tbody>
+</table>
+
+<script>
+	var myArray = [
+	    
+	]
+	
+	buildTable(myArray)
+
+
+
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].fullname}</td>
+							<td>${data[i].slack username}</td>
+							<td>${data[i].email}</td>
+              <td>${data[i].total points}</td>
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+</script>
                  
                   <script> 
                     fetch"leaderboard.json").then(
@@ -75,6 +106,7 @@
                               })
 
                               document.getElementById ("body").innerHTML 
+                  </script>
 
                  
                  <div class="sharethis-inline-share-buttons"></div>
