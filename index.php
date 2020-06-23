@@ -38,7 +38,6 @@
                   </tr>
                 </thead>
                 <tbody  id="table-section">
-<<<<<<< HEAD:index.php
                   <?php
                   $url = 'leaderboard.json';
                   $data = file_get_contents($url);
@@ -58,29 +57,6 @@
                 <?php
                   }
                 ?>
-=======
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark Essien</td>
-                    <td>@Otto</td>
-                    <td>hng@email.com</td>
-                    <td>17</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob Akan</td>
-                    <td>@Thornton</td>
-                    <td>hng@email.com</td>
-                    <td>12</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry Luna</td>
-                    <td>@the Bird</td>
-                    <td>hng@email.com</td>
-                    <td>9</td>
-                  </tr>
->>>>>>> b15b8e08f2d82f4756221a4cf1a7f5fc5751040b:index.html
              </head>
 
 <body>
@@ -91,10 +67,6 @@
        
 
 <script type="text/javascript" src="jquery-3.2.1.js"></script>
-<<<<<<< HEAD:index.php
-=======
-<script type="text/javascript" src="leaderboard.js"></script>
->>>>>>> b15b8e08f2d82f4756221a4cf1a7f5fc5751040b:index.html
       
         
     </tbody>
