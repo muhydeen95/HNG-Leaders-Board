@@ -38,25 +38,27 @@
                   </tr>
                 </thead>
                 <tbody  id="table-section">
-                  <?php
-                  $url = 'leaderboard.json';
-                  $data = file_get_contents($url);
-                  $json = json_decode($data);
-
-                  $i = 1;
-                  foreach($json as $rec){
-                    
-                ?>
-                <tr>
-                  <td><?php echo $i; $i++; ?></td>
-                  <td><?php echo $rec->FULLNAME ?></td>
-                  <td><?php echo $rec->USERNAME ?></td>
-                  <td><?php echo $rec->EMAIL ?></td>
-                  <td><?php echo $rec->TOTALPOINTS ?></td>
-                </tr>
-                <?php
-                  }
-                ?>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark Essien</td>
+                    <td>@Otto</td>
+                    <td>hng@email.com</td>
+                    <td>17</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob Akan</td>
+                    <td>@Thornton</td>
+                    <td>hng@email.com</td>
+                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry Luna</td>
+                    <td>@the Bird</td>
+                    <td>hng@email.com</td>
+                    <td>9</td>
+                  </tr>
              </head>
 
 <body>
@@ -67,6 +69,7 @@
        
 
 <script type="text/javascript" src="jquery-3.2.1.js"></script>
+<script type="text/javascript" src="leaderboard.js"></script>
       
         
     </tbody>
